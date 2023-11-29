@@ -11,7 +11,7 @@ func TestPrimeNumberReturnsUnchanged(t *testing.T) {
 	for _, num := range primeNumbers {
 		result := fizzbuzz(num)
 		if result != strconv.Itoa(num) {
-			t.Errorf("Number was tampered with, got: %s, want: %d.", result, num)
+			t.Errorf("Number was tampered with, got: %s, expected: %d.", result, num)
 		}
 	}
 }
@@ -31,7 +31,7 @@ func TestMultipleOfFiveReturnsBuzz(t *testing.T) {
 	for _, num := range multiplesOfFive {
 		result := fizzbuzz(num)
 		if result != "buzz" {
-			t.Errorf("Multiple of 5 does not return fizz, got: %s.", result)
+			t.Errorf("Multiple of 5 does not return buzz, got: %s.", result)
 		}
 	}
 }
@@ -41,7 +41,7 @@ func TestMultipleOfFiveAndThreeReturnsFizzBuzz(t *testing.T) {
 	for _, num := range multiplesOfFiveAndThree {
 		result := fizzbuzz(num)
 		if result != "fizzbuzz" {
-			t.Errorf("Multiple of 5 does not return fizz, got: %s.", result)
+			t.Errorf("Multiple of 5 does not return fizzbuzz, got: %s.", result)
 		}
 	}
 }
@@ -58,7 +58,7 @@ func TestZeroReturnsFizzBuzz(t *testing.T) {
 func TestHighNumberMultipleOfThreeReturnsFizz(t *testing.T) {
 	result := fizzbuzz(2147483649)
 	if result != "fizz" {
-		t.Errorf("Multiple of 5 does not return fizz, got: %s.", result)
+		t.Errorf("High number multiple of 5 does not return fizz, got: %s.", result)
 	}
 
 }
@@ -81,7 +81,7 @@ func TestHighNumberMultipleOfThreeAndFiveReturnsFizzBuzz(t *testing.T) {
 func TestHighNumberPrimesReturnsUnchanged(t *testing.T) {
 	result := fizzbuzz(2147483659)
 	if result != "2147483659" {
-		t.Errorf("High number primes doesn't return unchanged, got: %s. expected %d", result, 2147483659)
+		t.Errorf("High number primes doesn't return unchanged, got: %s. expected: 2147483659", result)
 	}
 
 }
@@ -97,7 +97,7 @@ func TestNegativeNumberMultipleOfThreeReturnsFizz(t *testing.T) {
 func TestNegativeNumberMultipleOfFiveReturnsBuzz(t *testing.T) {
 	result := fizzbuzz(-5)
 	if result != "buzz" {
-		t.Errorf("Negative multiple of 5 does not return fizz, got: %s.", result)
+		t.Errorf("Negative multiple of 5 does not return buzz, got: %s.", result)
 	}
 
 }
@@ -105,14 +105,14 @@ func TestNegativeNumberMultipleOfFiveReturnsBuzz(t *testing.T) {
 func TestNegativeNumberMultipleOfThreeReturnsFizzBuzz(t *testing.T) {
 	result := fizzbuzz(-15)
 	if result != "fizzbuzz" {
-		t.Errorf("Negative multiple of 5 and 3 does not return fizz, got: %s.", result)
+		t.Errorf("Negative multiple of 5 and 3 does not return fizzbuzz, got: %s.", result)
 	}
 }
 
 func TestNegativeNumberPrimesReturnsUnchanged(t *testing.T) {
 	result := fizzbuzz(-1)
 	if result != "-1" {
-		t.Errorf("Negative prime number is not unchanged, got: %s. expected %d", result, -1)
+		t.Errorf("Negative prime number is not unchanged, got: %s. expected -1", result)
 	}
 }
 
