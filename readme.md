@@ -4,9 +4,9 @@
 1) Setup VS Code with various extensions to aid in development following this [article](https://levene.me/boost-your-golang-development-with-these-top-vscode-extensions)
 3) Initialised the project using: go mod init fizzbuzz
 4) Ran the tests and outputted test PASS, inital results:
-  - ^TestPrimeNumberReturnsUnchanged$ fizzbuzz ok
-  - ^TestMultipleOfThreeReturnsFizz$ fizzbuzz ok
-  - Multiple of 5 does not return buzz, got: 25. --- FAIL: TestMultipleOfFiveReturnsBuzz (0.00s)
+    - ^TestPrimeNumberReturnsUnchanged$ fizzbuzz ok
+    - ^TestMultipleOfThreeReturnsFizz$ fizzbuzz ok
+    - Multiple of 5 does not return buzz, got: 25. --- FAIL: TestMultipleOfFiveReturnsBuzz (0.00s)
 5) Having looked at the fizzbuzz function, from the start i can see we're not using modulo but constants for comparison. So i changed == to % and checked for remainder of 0
 6) After changing line 7 and 10 to use modulo instead of ==, all of the tests now pass.
 7) Pseudocode for fizzbuzz should be: remainder of num / 5 = 0 and remainder of num / 3 = 0
