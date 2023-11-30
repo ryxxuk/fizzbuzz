@@ -118,9 +118,9 @@ func TestNegativeNumberPrimesReturnsUnchanged(t *testing.T) {
 
 // Range of values
 func TestRangeOfValuesReturnsCorrectly(t *testing.T) {
-	var multiplesOfFiveAndThree = [15]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+	var valueRange = [15]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
 	var s = ""
-	for _, num := range multiplesOfFiveAndThree {
+	for _, num := range valueRange {
 		s += fizzbuzz(num)
 	}
 	if s != "12fizz4buzzfizz78fizzbuzz11fizz1314fizzbuzz" {
